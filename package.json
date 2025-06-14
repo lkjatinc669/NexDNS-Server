@@ -1,0 +1,43 @@
+{
+  "name": "nexdns-server",
+  "version": "1.0.0",
+  "description": "A DNS Server for managing internal networking",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "sudo $(which node) src/index.js", 
+    "dev": "nodemon src/index.js",              
+    "upload-dns-record": "node src/batch-uploader.js -ut dnsrecord -jf data/dns-record-uploader.js",
+    "upload-black-list": "node src/batch-uploader.js -ut blacklist -jf data/black-list-uploader.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lkjatinc669/NexDNS-Server.git"
+  },
+  "keywords": [
+    "NexDNS",
+    "Server",
+    "DNS",
+    "NodeJS",
+    "Custom DNS",
+    "Local Network"
+  ],
+  "author": "Jatin Gohil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lkjatinc669/NexDNS-Server/issues"
+  },
+  "homepage": "https://github.com/lkjatinc669/NexDNS-Server#readme",
+  "dependencies": {
+    "dns-packet": "^5.6.1",
+    "dotenv": "^16.5.0",
+    "mongoose": "^8.15.1",
+    "node-arg-parser": "^0.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=22.16.0"
+  }
+}

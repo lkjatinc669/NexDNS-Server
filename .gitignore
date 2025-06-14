@@ -1,0 +1,13 @@
+node_modules/
+
+package-lock.json
+.env
+
+# data/
+# data/black-list-uploader.js
+# data/dns-record-uploader.js
+
+logs/
+setup/
+
+.trash.*
